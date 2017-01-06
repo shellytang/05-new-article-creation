@@ -9,25 +9,10 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <!-- REVIEW: This is the stylesheet for the syntax highlighting -->
     <link rel="stylesheet" href="vendor/styles/railscasts.css">
+  </head>
 
-    <script id="article-template" type="text/x-handlebars-template">
-      <article
-        class="clearfix"
-        data-author="{{authorSlug}}"
-        data-category="{{categorySlug}}">
-        <header>
-          <h1>{{title}}</h1>
-          <div class="byline">
-            By <address><a href="{{authorUrl}}">{{author}}</a></address>
-            {{publishStatus}}
-          </div>
-        </header>
-        <section class="article-body">{{{body}}}</section>
-        <a href="#" class="read-on">Read on &rarr;</a>
-      </article>
-    </script>
-    </head>
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1 pull-left">
@@ -44,11 +29,12 @@
         </ul>
       </nav>
     </header>
+
     <main class="clearfix">
       <section id="write" class="tab-content">
         <h1>New Article</h1>
         <!-- DONE: Set up a form to accept user input for a new blog article: -->
-        <form action="#" id="new-form">
+        <form id="new-form">
           <label>
             <input type="text" id="article-title" placeholder="Article title" required>
           </label>
@@ -67,9 +53,11 @@
           </label>
         </form>
       </section>
-      <section id="articles" class="tab-content">
 
-      </section>
+      <!-- REVIEW: Empty section to hold our article preview -->
+      <section id="articles" class="tab-content"></section>
+
+      <!-- REVIEW: Section that will hold our JSON export -->
       <section id="article-export">
         <label id="export-field" for="article-json" class="pull-right">
           <input type="text" readonly id="article-json">
@@ -77,8 +65,9 @@
         </label>
       </section>
     </main>
+
     <footer>
-      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+      &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
