@@ -70,7 +70,7 @@ articleView.initNewArticlePage = function() {
   // TODO: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide the export field for now, and show it once we have data to export.
 
-  // TODO: Add an event handler to update the preview and the export field if any inputs change.
+  // TODO: Add an event listener/handler to update the preview and the export field if any inputs change.
 };
 
 articleView.create = function() {
