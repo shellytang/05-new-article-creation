@@ -92,16 +92,16 @@ articleView.create = function() {
     category: $('#article-category').val(),
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
-  // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
+  // DONE: Use our interface to the Handblebars template to put this new article into the DOM:
   $('#articles').append(newArt.toHtml());
   console.log(newArt);
 
-  // TODO: Activate the highlighting of any code blocks:
+  // DONE: Activate the highlighting of any code blocks:
   $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
 
-  // TODO: Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
+  // DONE: Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
   $('#export-field').show();
   $('#article-json').val(JSON.stringify(newArt) + ' ,');
 };
